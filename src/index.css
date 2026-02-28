@@ -1,0 +1,135 @@
+:root {
+  /* Premium Modern Palette */
+  --primary-color: #6366f1;
+  /* Indigo */
+  --primary-color-rgb: 99, 102, 241;
+
+  --secondary-color: #ec4899;
+  /* Pink */
+  --secondary-color-rgb: 236, 72, 153;
+
+  --accent-color: #14b8a6;
+  /* Teal for highlights */
+
+  /* Light Theme */
+  --bg-color-light: #fdfdfd;
+  --text-color-light: #1e293b;
+  --card-bg-light: rgba(255, 255, 255, 0.85);
+
+  /* Dark Theme */
+  --bg-color-dark: #0f172a;
+  /* Slate 900 */
+  --text-color-dark: #f8fafc;
+  --card-bg-dark: rgba(30, 41, 59, 0.6);
+
+  /* Typography */
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-header: 'Outfit', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+/* Text Selection */
+::selection {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Reset & Base */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  overflow-x: hidden;
+}
+
+body.light {
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+}
+
+body.dark {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 5rem 0;
+  scroll-margin-top: 10px;
+}
+
+.glass-card {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+.dark .glass-card {
+  background: var(--card-bg-dark);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.light .glass-card {
+  background: var(--card-bg-light);
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+}
