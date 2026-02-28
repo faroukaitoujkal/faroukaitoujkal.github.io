@@ -31,7 +31,7 @@ function App() {
         <LanguageProvider>
             <ThemeProvider>
                 <div className="app-container">
-                    <Router>
+                    <Router basename="/faroukaitoujkal.github.io">
                         <Routes>
                             <Route path="/" element={<MainContent />} />
                             <Route path="/mentions-legales" element={<MentionsLegales />} />
